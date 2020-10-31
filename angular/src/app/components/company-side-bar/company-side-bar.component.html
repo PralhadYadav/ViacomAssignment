@@ -1,0 +1,16 @@
+<div class="text-right">
+    <div class="panel-no-border">
+        <div >
+            <img id='logo' class="logo" src="../../../assets/sample-logo.jpg" />
+        </div>
+        <div id='description' *ngIf="company">
+            <p>
+                <strong>{{company.title}}</strong><br>
+                {{company.description}}<br>
+                {{company.address}}<br>
+               {{company.city}}<br>
+               {{company.state}} - {{company.pincode}}<br>
+            </p>
+        </div>
+    </div>
+</div>
