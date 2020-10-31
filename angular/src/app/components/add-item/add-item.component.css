@@ -10,3 +10,8 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.pageTitle{
+  margin-left: 25%;
+  margin-top: 2%;
+}

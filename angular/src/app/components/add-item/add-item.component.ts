@@ -31,9 +31,14 @@ export class AddItemComponent implements OnInit {
   }
 
   deleteRecord(data) {
-    this.items = this.items.filter(x => x.firstName != data.firstName || x.lastName != data.lastName || x.contactNo != data.contactNo)
-    if (this.items.length == 0) {
-      this.addDefaultRow()
+    if(confirm('Are you sure, you want to delete?')){
+      this.items = this.items.filter(x => x.firstName != data.firstName || x.lastName != data.lastName || x.contactNo != data.contactNo)
+      if (this.items.length == 0) {
+        this.addDefaultRow()
+      }
+      this.toastr.success('Success', 'Data Deleted Successfully.',{
+        closeButton:true
+      });
     }
   }
 
@@ -49,7 +54,9 @@ export class AddItemComponent implements OnInit {
       }
       this.items = []
       this.addDefaultRow()
-      this.toastr.success('Success', 'Data Submitted Successfully.');
+      this.toastr.success('Success', 'Data Submitted Successfully.',{
+        closeButton:true
+      });
     }
   }
 }
