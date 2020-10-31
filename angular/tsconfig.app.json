@@ -17,5 +17,10 @@
   ],
   "include": [
     "src/**/*.ts"
-  ]
+  ],
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts",
+    "src/app/services/mockdata.service.ts"
+ ]
 }
